@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
-
+    tools:context=".SignUpActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -41,19 +40,14 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Log in"
-            android:textAllCaps="false"
-            android:textSize="30dp"></Button>
-
-        <Button
             android:id="@+id/button_Signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sign up"
             android:textAllCaps="false"
-            android:textSize="20dp"></Button>
+            android:textSize="30dp"></Button>
     </LinearLayout>
+
+
+
 </LinearLayout>
