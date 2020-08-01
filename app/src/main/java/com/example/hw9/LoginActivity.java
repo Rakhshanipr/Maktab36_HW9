@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
 
 public class LoginActivity extends AppCompatActivity {
     // region set initialization
@@ -60,10 +63,15 @@ public class LoginActivity extends AppCompatActivity {
         mButtonLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if (!mEditTextUserName.getText().toString().equals(mUserName) || !mEditTextPassword.getText().toString().equals(mPassword)) {
-                    Toast.makeText(LoginActivity.this, "user not found", Toast.LENGTH_SHORT).show();
+                    Snackbar snackbar = Snackbar
+                            .make(view, "User not found !", Snackbar.LENGTH_LONG);
+                    snackbar.show();
                 } else {
-                    Toast.makeText(LoginActivity.this, "user is valid", Toast.LENGTH_SHORT).show();
+                    Snackbar snackbar = Snackbar
+                            .make(view, "User is valid", Snackbar.LENGTH_LONG);
+                    snackbar.show();
 
                 }
             }
