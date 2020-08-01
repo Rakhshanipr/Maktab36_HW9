@@ -1,4 +1,4 @@
-package com.example.hw9;
+package com.example.hw9.LogIn;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.hw9.R;
 
 public class SignUpActivity extends AppCompatActivity {
     Button mButtonLogin;
