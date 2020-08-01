@@ -1,4 +1,4 @@
-package com.example.hw9.LogIn;
+package com.example.hw9.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
