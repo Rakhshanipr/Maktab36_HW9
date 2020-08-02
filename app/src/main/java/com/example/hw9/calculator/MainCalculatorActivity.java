@@ -1,6 +1,7 @@
 package com.example.hw9.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
@@ -18,10 +19,14 @@ public class MainCalculatorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager
-                .beginTransaction()
-                .add(R.id.fragment_container_edittext, new EditTextFragment())
-                .add(R.id.fragment_container_buttons, new ButtonsFragment())
-                .commit();
+        Fragment fragment=fragmentManager.findFragmentById(R.id.fragment_container_edittext);
+        if (fragment == null) {
+            fragmentManager
+                    .beginTransaction()
+                    .add(R.id.fragment_container_edittext, new EditTextFragment())
+                    .add(R.id.fragment_container_buttons, new ButtonsFragment())
+                    .commit();
+        }
+
     }
 }

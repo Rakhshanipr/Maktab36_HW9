@@ -12,7 +12,7 @@
         <EditText
             android:id="@+id/edit_text_multiLine"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:ems="10"
             android:gravity="right|bottom"
@@ -20,5 +20,4 @@
             android:textSize="26dp"
             android:inputType="textMultiLine" />
     </LinearLayout>
-
 </LinearLayout>

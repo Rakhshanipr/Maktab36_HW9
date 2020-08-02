@@ -17,9 +17,14 @@ public class EditTextFragment extends Fragment {
 
     //endregion
 
-    public static void setText(String value){
+    public static void setText(String value) {
         mEditText.setText(value);
     }
+
+    public static void addText(String value) {
+        mEditText.setText(mEditText.getText() + value);
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +35,13 @@ public class EditTextFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_edit_text, container, false);
-        mEditText=view.findViewById(R.id.edit_text_multiLine);
+        View view = inflater.inflate(R.layout.fragment_edit_text, container, false);
+        findAllViewsById(view);
+
         return view;
+    }
+
+    private void findAllViewsById(View view) {
+        mEditText = view.findViewById(R.id.edit_text_multiLine);
     }
 }
